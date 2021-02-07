@@ -5,7 +5,7 @@ import {
 	Route,
 	Link
 } from "react-router-dom";
-
+import Conditions from "../src/pages/conditions";
 // Each logical "route" has two components, one for
 // the sidebar and one for the main area. We want to
 // render both of them in different places when the
@@ -19,8 +19,8 @@ const routes = [
 	{
 		path: "/",
 		exact: true,
-		sidebar: () => <div>home!</div>,
-		main: () => <h2>Home</h2>
+		sidebar: Conditions,
+		main: Conditions
 	},
 	{
 		path: "/bubblegum",
