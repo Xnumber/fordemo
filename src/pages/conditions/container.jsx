@@ -12,4 +12,5 @@ class Conditions extends React.Component {
 	}
 }
 
+// Conditions.displayName =  "Conditions";
 export default Conditions;
