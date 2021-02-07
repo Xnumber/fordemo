@@ -22,16 +22,16 @@ const routes = [
 		sidebar: Conditions,
 		main: Conditions
 	},
-	{
-		path: "/bubblegum",
-		sidebar: () => <div>bubblegum!</div>,
-		main: () => <h2>Bubblegum</h2>
-	},
-	{
-		path: "/shoelaces",
-		sidebar: () => <div>shoelaces!</div>,
-		main: () => <h2>Shoelaces</h2>
-	}
+	// {
+	// 	path: "/bubblegum",
+	// 	sidebar: () => <div>bubblegum!</div>,
+	// 	main: () => <h2>Bubblegum</h2>
+	// },
+	// {
+	// 	path: "/shoelaces",
+	// 	sidebar: () => <div>shoelaces!</div>,
+	// 	main: () => <h2>Shoelaces</h2>
+	// }
 ];
 
 export default function SidebarExample() {
@@ -70,8 +70,10 @@ export default function SidebarExample() {
 								key={index}
 								path={route.path}
 								exact={route.exact}
-								children={<route.sidebar />}
-							/>
+								// children={<route.sidebar />}
+							>
+								<route.sidebar/>
+							</Route>
 						))}
 					</Switch>
 				</div>
@@ -85,8 +87,10 @@ export default function SidebarExample() {
 								key={index}
 								path={route.path}
 								exact={route.exact}
-								children={<route.main />}
-							/>
+								// children={<route.main />}
+							>
+								<route.main />
+							</Route>
 						))}
 					</Switch>
 				</div>
